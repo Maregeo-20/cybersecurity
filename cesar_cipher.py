@@ -8,9 +8,9 @@ def Cesar_cipher(text):
         F_text = ''  # Reset F_text for each shift
         for i in range(len(text)):
             if text[i] in L_alfabet:
-                F_text += L_alfabet[(L_alfabet.index(text[i]) + k) % 26]
+                F_text += L_alfabet[(L_alfabet.index(text[i]) - k) % 26]
             elif text[i] in U_alfabet:
-                F_text += U_alfabet[(U_alfabet.index(text[i]) + k) % 26]
+                F_text += U_alfabet[(U_alfabet.index(text[i]) - k) % 26]
             elif text[i] in special_caracter:
                 F_text += text[i]
             else:
